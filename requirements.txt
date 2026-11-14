@@ -9,3 +9,4 @@ azure-core
 azure-cognitiveservices-speech
 python-dotenv
 pydantic
+slowapi

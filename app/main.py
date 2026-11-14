@@ -1,28 +1,55 @@
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from app.schemas import ChatRequest, ChatResponse
-
-from scripts.explorer_config import EXPLORERS
-
-import logging
-
-from fastapi import HTTPException
-from app.services.rag_service import RagService
-
 import base64
-import re
-
-from scripts.test_speech import generate_audio
+import logging
 import os
+import re
 import tempfile
 
+from fastapi.middleware.cors import CORSMiddleware
+
+from slowapi import Limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.util import get_remote_address
+
+from app.schemas import ChatRequest, ChatResponse
+from app.services.rag_service import RagService
+from scripts.explorer_config import EXPLORERS
+from scripts.test_speech import generate_audio
+from fastapi import FastAPI, HTTPException, Request, Response
+
+
+logger = logging.getLogger(__name__)
+
+# Rate limiting:
+# Use the connection's remote address rather than trusting
+# arbitrary X-Forwarded-For headers supplied by clients.
+limiter = Limiter(
+    key_func=get_remote_address,
+    default_limits=[],
+    headers_enabled=True,
+)
 
 app = FastAPI(
     title="Space Buddies API",
     description="NASA explorer storytelling powered by RAG.",
     version="1.0.0",
 )
+
+app.state.limiter = limiter
+
+
+@app.exception_handler(RateLimitExceeded)
+async def rate_limit_handler(
+    request: Request,
+    exc: RateLimitExceeded,
+):
+    from slowapi import _rate_limit_exceeded_handler
+
+    return _rate_limit_exceeded_handler(request, exc)
+
+
+app.add_middleware(SlowAPIMiddleware)
 
 # Local development frontend only.
 # Production frontend origins will be configured later.
@@ -37,7 +64,6 @@ app.add_middleware(
     allow_headers=["Content-Type"],
 )
 
-logger = logging.getLogger(__name__)
 rag_service = RagService()
 
 
@@ -61,34 +87,31 @@ def list_explorers():
     ]
 
 
-
 @app.post("/api/chat", response_model=ChatResponse)
-def chat(request: ChatRequest):
-    explorer = EXPLORERS[request.explorer_id]
+@limiter.limit("5/minute")
+def chat(request: Request, payload: ChatRequest,response: Response,):
+    explorer = EXPLORERS[payload.explorer_id]
 
     try:
-        # Retrieve NASA evidence
+        # Retrieve NASA evidence.
         chunks = rag_service.retrieve(
-            explorer_id=request.explorer_id,
-            question=request.question,
+            explorer_id=payload.explorer_id,
+            question=payload.question,
         )
 
-        # Generate a grounded answer
+        # Generate a grounded answer.
         answer = rag_service.generate_answer(
-            explorer_id=request.explorer_id,
-            question=request.question,
+            explorer_id=payload.explorer_id,
+            question=payload.question,
             chunks=chunks,
         )
 
-
-        # Generate spoken answer using the explorer's voice
-        
         audio_base64 = None
         audio_error = None
-
         temporary_audio_path = None
 
         try:
+            # Remove citation markers before narration.
             spoken_text = re.sub(
                 r"\[\d+\]",
                 "",
@@ -123,9 +146,7 @@ def chat(request: ChatRequest):
             ):
                 os.remove(temporary_audio_path)
 
-
-
-        # Return the sources used as model context
+        # Return NASA sources used as model context.
         sources = [
             {
                 "chunk_id": chunk["chunk_id"],
@@ -136,7 +157,7 @@ def chat(request: ChatRequest):
         ]
 
         return ChatResponse(
-            explorer_id=request.explorer_id,
+            explorer_id=payload.explorer_id,
             explorer_name=explorer["name"],
             answer=answer,
             sources=sources,
@@ -151,4 +172,3 @@ def chat(request: ChatRequest):
             status_code=503,
             detail="The NASA knowledge service is temporarily unavailable.",
         )
-
