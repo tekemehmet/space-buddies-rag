@@ -1,0 +1,81 @@
+
+# ==========================================
+# Space Buddies - Python FastAPI / Azure RAG
+# ==========================================
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+tmp/
+temp/
+
+# Generated audio and application output
+output/
+*.mp3
+*.wav
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Azure local development
+.azure/
+local.settings.json
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Node.js (if frontend tools are added)
+node_modules/
+.npm/
+dist-frontend/

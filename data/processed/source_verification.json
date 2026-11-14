@@ -1,0 +1,176 @@
+{
+  "verified_at": "2026-11-14T15:51:03.492565+00:00",
+  "total_sources": 17,
+  "results": [
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html",
+      "explorers": [
+        "lunar-module"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo.html",
+      "error": null
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+      "explorers": [
+        "lunar-rover"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/insight/",
+      "explorers": [
+        "insight"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/insight/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/insight/science-highlights/",
+      "explorers": [
+        "insight"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/insight/science-highlights/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/insight/science-instruments/",
+      "explorers": [
+        "insight"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/insight/science-instruments/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/insight/science/",
+      "explorers": [
+        "insight"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/insight/science/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "explorers": [
+        "ingenuity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+      "explorers": [
+        "opportunity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "explorers": [
+        "opportunity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/mission/mer-spirit/",
+      "explorers": [
+        "spirit"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/mission/mer-spirit/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/resource/apollo-landing-sites/",
+      "explorers": [
+        "lunar-module"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/resource/apollo-landing-sites/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/resource/carbonate-containing-martian-rocks/",
+      "explorers": [
+        "spirit"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/resource/carbonate-containing-martian-rocks/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/resource/ingenuity-mars-helicopter-by-the-numbers/",
+      "explorers": [
+        "ingenuity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/resource/ingenuity-mars-helicopter-by-the-numbers/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/resource/mars-report-the-most-extreme-flights-of-nasas-ingenuity-mars-helicopter/",
+      "explorers": [
+        "ingenuity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/resource/mars-report-the-most-extreme-flights-of-nasas-ingenuity-mars-helicopter/",
+      "error": null
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/moon/history-of-lunar-exploration/",
+      "explorers": [
+        "lunar-rover"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://science.nasa.gov/solar-system/moon/history-of-lunar-exploration/",
+      "error": null
+    },
+    {
+      "url": "https://www.nasa.gov/history/apollos-lunar-module-bridged-technological-leap-to-the-moon/",
+      "explorers": [
+        "lunar-module"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://www.nasa.gov/history/apollos-lunar-module-bridged-technological-leap-to-the-moon/",
+      "error": null
+    },
+    {
+      "url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/",
+      "explorers": [
+        "ingenuity"
+      ],
+      "status": "PASS",
+      "http_status": 200,
+      "final_url": "https://www.nasa.gov/news-release/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/",
+      "error": null
+    }
+  ]
+}

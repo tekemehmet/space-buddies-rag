@@ -1,0 +1,14 @@
+{
+  "document_id": "lunar-rover-engineering",
+  "explorer_id": "lunar-rover",
+  "explorer_name": "Lunar Roving Vehicle",
+  "mission_family": "Apollo",
+  "body": "Moon",
+  "equipment_type": "rover",
+  "topic": "engineering",
+  "source_agency": "NASA",
+  "source_title": "The Apollo Lunar Roving Vehicle",
+  "source_url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+  "retrieved_at": "2026-11-14T15:49:08.589962+00:00",
+  "content": "The Apollo Lunar Roving Vehicle was an electric-powered vehicle designed to transport astronauts across the Moon. It used four wheels with wire-mesh tires instead of conventional rubber tires. The wheels were constructed with woven metal wire to provide traction on loose lunar soil while keeping the vehicle lightweight. Each wheel had its own electric motor, allowing the rover to drive across the lunar surface. The electric motors were powered by onboard batteries. The Lunar Roving Vehicle was used during Apollo 15, Apollo 16, and Apollo 17. Its design allowed astronauts to travel farther from their lunar modules and explore more of the Moon than they could have reached on foot."
+}

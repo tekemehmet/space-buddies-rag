@@ -1,0 +1,33 @@
+
+[
+  {
+    "explorer_id": "opportunity",
+    "question": "What did you discover about water on Mars?",
+    "expected_chunk_id": "opportunity-blueberries-chunk-001"
+  },
+  {
+    "explorer_id": "spirit",
+    "question": "What evidence of water did you discover on Mars?",
+    "expected_chunk_id": "spirit-comanche-chunk-001"
+  },
+  {
+    "explorer_id": "insight",
+    "question": "What did you learn about marsquakes?",
+    "expected_chunk_id": "insight-science-highlights-chunk-004"
+  },
+  {
+    "explorer_id": "ingenuity",
+    "question": "Why did you stop flying on Mars?",
+    "expected_chunk_id": "ingenuity-final-flight-chunk-001"
+  },
+  {
+    "explorer_id": "lunar-module",
+    "question": "How did you help astronauts land on the Moon?",
+    "expected_chunk_id": "lunar-module-history-chunk-005"
+  },
+  {
+    "explorer_id": "lunar-rover",
+    "question": "How did your wheels work on the Moon?",
+    "expected_chunk_id": "lunar-rover-engineering-chunk-001"
+  }
+]

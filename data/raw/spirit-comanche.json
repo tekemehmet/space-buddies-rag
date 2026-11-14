@@ -1,0 +1,14 @@
+{
+  "document_id": "spirit-comanche",
+  "explorer_id": "spirit",
+  "explorer_name": "Spirit",
+  "mission_family": "Mars Exploration Rover",
+  "body": "Mars",
+  "equipment_type": "rover",
+  "topic": "water_discovery",
+  "source_agency": "NASA",
+  "source_title": "Carbonate-Containing Martian Rocks",
+  "source_url": "https://science.nasa.gov/resource/carbonate-containing-martian-rocks/",
+  "retrieved_at": "2026-11-14T15:32:28.262106+00:00",
+  "content": "NASA's Spirit rover investigated a Martian rock outcrop called Comanche in December 2005. Scientists later discovered that the rocks contained unusually high concentrations of magnesium and iron carbonates. These carbonate minerals provided evidence that liquid water once existed in a relatively neutral, non-acidic environment on Mars. Such conditions could have been more favorable for microbial life than the strongly acidic environments identified elsewhere on Mars. Spirit used several scientific instruments to study Comanche, including its Mossbauer spectrometer, miniature thermal emission spectrometer, and alpha particle X-ray spectrometer. Scientists reported the carbonate findings in 2010."
+}

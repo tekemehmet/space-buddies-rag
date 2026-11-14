@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+fastapi
+uvicorn[standard]
+gunicorn
+openai
+azure-search-documents
+azure-core
+azure-cognitiveservices-speech
+python-dotenv
+pydantic
