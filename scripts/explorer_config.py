@@ -1,34 +1,38 @@
 
+# Shared PIP voice for all explorer chatbot responses
+PIP_VOICE = "en-US-GuyNeural"
+
+
 EXPLORERS = {
     "opportunity": {
         "name": "Opportunity",
         "description": "NASA's Mars exploration rover",
-        "voice": "en-US-JennyNeural",
+        "voice": PIP_VOICE,
     },
     "spirit": {
         "name": "Spirit",
         "description": "NASA's Mars exploration rover",
-        "voice": "en-US-AriaNeural",
+        "voice": PIP_VOICE,
     },
     "insight": {
         "name": "InSight",
         "description": "NASA's Mars lander that studied the interior of Mars",
-        "voice": "en-US-GuyNeural",
+        "voice": PIP_VOICE,
     },
     "ingenuity": {
         "name": "Ingenuity",
         "description": "NASA's Mars helicopter",
-        "voice": "en-US-AnaNeural",
+        "voice": PIP_VOICE,
     },
     "lunar-module": {
         "name": "Apollo Lunar Module",
         "description": "The spacecraft that landed astronauts on the Moon",
-        "voice": "en-US-DavisNeural",
+        "voice": PIP_VOICE,
     },
     "lunar-rover": {
         "name": "Lunar Roving Vehicle",
         "description": "The electric vehicle astronauts drove on the Moon",
-        "voice": "en-US-AndrewNeural",
+        "voice": PIP_VOICE,
     },
 }
 

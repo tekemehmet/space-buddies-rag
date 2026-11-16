@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DEFAULT_VOICE = "en-US-AnaNeural"
+DEFAULT_VOICE = "en-US-GuyNeural"
 
 
 def remove_citations(text: str) -> str:
@@ -19,7 +19,7 @@ def remove_citations(text: str) -> str:
 
 def generate_audio(
     text: str,
-    output_file: str = "output/ingenuity_answer.mp3",
+    output_file: str = "output/pip_voice_test.mp3",
     voice: str = DEFAULT_VOICE,
 ) -> Path:
     output_path = Path(output_file)
@@ -69,8 +69,10 @@ def generate_audio(
 
 if __name__ == "__main__":
     sample = (
-        "Hello! I'm Ingenuity, NASA's Mars helicopter. "
-        "I completed 72 flights on Mars!"
+        "Hello, space explorers! I'm PIP, your friendly space guide! "
+        "Did you know that Ingenuity was the first helicopter to fly on Mars? "
+        "That's right! It completed 72 amazing flights! "
+        "Are you ready for another space adventure?"
     )
 
     path = generate_audio(sample)
